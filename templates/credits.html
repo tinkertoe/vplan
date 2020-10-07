@@ -1,0 +1,36 @@
+{%extends "base.html"%}
+
+{%block head%}
+<title>VPlan Maschine Credits | tinkertoe</title>
+
+<style>
+  .li-toplevel{
+    margin-top: 15px;
+  }
+</style>
+{% endblock %}
+
+{%block body%}
+<p><a href="http://vp.tinkertoe.net"><button type="button" class="btn btn-primary btn-lg">&laquo; Zur&uuml;ck</button></a></p>
+<p class="lead" style="font-size: 25px;">Credits</p>
+
+<ul style="font-size: 23px" type="none">
+  <li class="li-toplevel">Python Bibliotheken:</li>
+  <ul>
+    <li>Flask</li>
+    <li>checksum</li>
+    <li>Jinja2</li>
+    <li>tabula-py</li>
+    <li>numpy</li>
+    <li>pdftotext</li>
+    <li>Pillow</li>
+    <li>psutil</li>
+  </ul>
+
+  <li class="li-toplevel">CSS:</li>
+  <ul>
+    <li>Bootstrap</li>
+  </ul>
+</ul>
+
+{% endblock %}

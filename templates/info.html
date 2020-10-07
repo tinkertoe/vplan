@@ -1,0 +1,40 @@
+{%extends "base.html"%}
+
+{%block head%}
+<title>VPlan der {{ school_class }}</title>
+{% endblock %}
+
+
+{%block body%}
+        <p><a href="http://vp.tinkertoe.net"><button type="button" class="btn btn-primary btn-lg">&laquo; Zur&uuml;ck</button></a></p>
+
+
+
+
+        <div class="data" style="font-size: 20px; color: #212529;">
+          {% for day in output %}
+          <p>
+            <b>{{ day|first }}</b>
+
+            <ul>
+                {% if day|length() < 2 %}
+                <li>keine Vertretungen</li>
+                {% endif %}
+
+                {% for entry in day %}
+                {% if entry|length() > 10 %}
+                <li>{{ entry }}</li>
+
+                {% endif %}
+                {% endfor %}
+            </ul>
+
+          </p>
+          {% endfor %}
+        </div>
+
+
+        <p style="font-size: 11px;">Reihenfolge:<br><i>Stunde | Klasse | eigl. Fach | eigl. Lehrer | Lehrer | Fach | Raum | V-Art</i></p>
+        <a href="{{ file_link }}"><img src="/static/download.png" width="72px"></a><a href="whatsapp://send?text=Vplan%20Screenshot:%20{{ file_link }}" data-action="share/whatsapp/share"><img src="/static/whatsapp.png" width="72px"></a>
+        <br>
+{% endblock %}

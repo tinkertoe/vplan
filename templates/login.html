@@ -1,0 +1,20 @@
+{%extends "base.html"%}
+
+{%block head%}
+    <title>VPlan Maschine | tinkertoe</title>
+{% endblock %}
+
+{%block body%}
+    <form action="{{ url_for('setcookie') }}" method="POST">
+
+      <div class="form-group">
+        <label for="pw" class="lead" style="font-size: 25px;">Passwort für VPlan</label><br>
+        <label for="pw"><span class="text-muted">Gleiches Passwort, wie beim richtigen VPlan!</span></label>
+        <input id="pw" class="form-control" type="password" name="pw" placeholder="Passwort" required>
+
+      </div>
+
+      <button type="submit" class="btn btn-primary">Weiter &raquo;</button>
+
+    </form>
+{% endblock %}

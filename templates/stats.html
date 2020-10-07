@@ -1,0 +1,16 @@
+{%extends "base.html"%}
+
+{%block head%}
+    <title>VPlan Maschine | tinkertoe</title>
+{% endblock %}
+
+{%block body%}
+        <p class="lead" style="font-size: 25px;">Statistiken:</p>
+        <div style="margin-top: 20px;">
+          <ul class="lead" style="color: #212529">
+            <li>VPlan Abrufe: <a href="http://vp.tinkertoe.net/db/r_services">{{ service_count }}</a></li>
+            <li>Letzter Abruf: <a href="http://vp.tinkertoe.net/db/r_lastserve">{{ last_serve }}</a></li>
+            <li>Screenshots: <a href="http://vp.tinkertoe.net/db/r_screenshots">{{ file_count }}</a></li>
+          </ul>
+        </div>
+{% endblock %}
